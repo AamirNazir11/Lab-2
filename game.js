@@ -1,19 +1,3 @@
-function start() {
-    //create bear
-    bear = new Bear();
-    // Add an event listener to the keypress event.
-    document.addEventListener("keydown", moveBear, false);
-    //event listener for the entering bear speed
-    document.getElementById("speedBear").addEventListener("change", setSpeed, false);
-    //create new array for bees
-    bees = new Array();
-    //create bees
-    makeBees()
-    //call updatebees to start moving the bees
-    updateBees()
-    //take start time
-    lastStingTime = new Date();
-}
 function Bear() {
     this.dBear = 100;
     this.htmlElement = document.getElementById("bear");
@@ -46,6 +30,23 @@ function Bear() {
         if (this.y > h - ih) this.y = h - ih;
     };
 
+}
+
+function start() {
+    //create bear
+    bear = new Bear();
+    // Add an event listener to the keypress event.
+    document.addEventListener("keydown", moveBear, false);
+    //event listener for the entering bear speed
+    document.getElementById("speedBear").addEventListener("change", setSpeed, false);
+    //create new array for bees
+    bees = new Array();
+    //create bees
+    makeBees()
+    //call updatebees to start moving the bees
+    updateBees()
+    //take start time
+    lastStingTime = new Date();
 }
 
 function setSpeed() {
