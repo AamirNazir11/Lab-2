@@ -148,6 +148,10 @@ function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 }
 function makeBees() {
+    while(bees.length > 0){
+        bees[bees.length - 1].htmlElement.remove();
+        bees.pop();
+    }
     //get number of bees specified by the user
     let nbBees = document.getElementById("nbBees").value;
     nbBees = Number(nbBees); //try converting the content of the input to a number
@@ -184,7 +188,7 @@ function updateBees() { // update loop for game
     let period = document.getElementById("periodTimer").value; //timer set by user
     //update the timer for the next move
     if (hits.innerHTML >= 1000) {  //checks for number of hits and if it has reached 1000 stings yet
-        alert("Game Over!!!!!");    //if it has then it alerts the user and stops the game
+        alert("Game Over, Please click on reload!");    //alert and stop game
     }
     else {
         updateTimer = setTimeout('updateBees()', period); //this changes the position based on the amount of hits

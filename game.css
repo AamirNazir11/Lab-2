@@ -9,8 +9,8 @@
 #board {
     position: absolute;
     height: 600px;
-    width: 1200px;
-    background-color: rgb(6, 136, 119);
+    width: 2030px;
+    background-color: rgb(86, 127, 204);
     align-content: center;
     align-self: center;
 }
@@ -22,7 +22,7 @@
 }
 
 #scores {
-    background-color: rgb(247, 134, 241);
+    background-color: rgb(94, 181, 231);
     align-content: center;
     align-self: center;
 }
